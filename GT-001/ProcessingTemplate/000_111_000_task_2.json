@@ -1,0 +1,57 @@
+{
+  "description": "ldkfjslkdfjlsdkjflsdkjflsd",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "node": "TMG_AS_ROOT",
+  "onHold": true,
+  "owner": "i",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "title": "${id} ala ma kota",
+  "customFieldValues": {
+    "CF1": "abcdef"
+  },
+  "forceCompletedCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "TMG_AS_ROOT_HOLD",
+        "operator": "IS_NOT_NULL",
+        "value": null
+      }
+    ],
+    "operator": "AND"
+  },
+  "ignoreCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "processingTimestamp",
+        "operator": "NOT_IN_CAL",
+        "value": "TMG_FRI"
+      }
+    ],
+    "operator": "AND"
+  },
+  "processingCommand": {
+    "script": "sleep 12\n\ndate\n\nps -ef\n\nls -alt\n\nsleep 1"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FAILED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "OJ"
+      }
+    }
+  ]
+}

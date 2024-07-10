@@ -1,0 +1,107 @@
+{
+  "description": "アラは猫を飼っています",
+  "highRiskStatisticMethod": "COUNT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "TMG_AS_ROOT",
+  "owner": "i",
+  "priority": "11",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "weight": "10",
+  "processingCommand": {
+    "script": "sleep 22\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho alamakota\n\necho привет\n\necho ${endpoint}\n\necho \"アラは猫を飼っています\"\n\nexit 0\n"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_LOADED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "1"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_QUEUED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "2"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_READY",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "3"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_STARTED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "keepForcedStatus": true,
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "4"
+      }
+    }
+  ],
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "TMG_SEMAPHORE_01",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "TMG_SEMAPHORE_01",
+      "resourceType": "BINARY_SEMAPHORE",
+      "semaphoreState": "ON",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    },
+    {
+      "dependencyType": "RESOURCE",
+      "name": "TMG_SEMAPHORE_01",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "TMG_SEMAPHORE_01",
+      "resourceType": "BINARY_SEMAPHORE",
+      "semaphoreState": "ON",
+      "serverNodeType": "LINUX",
+      "taskType": "SH",
+      "timestampRelation": "LT",
+      "timestampSelector": "PREV_DAY"
+    },
+    {
+      "dependencyType": "RESOURCE",
+      "name": "0810_1200",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "0810_1200",
+      "resourceType": "TIME_SEMAPHORE",
+      "semaphoreState": "OFF",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ]
+}

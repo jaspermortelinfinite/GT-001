@@ -1,0 +1,47 @@
+{
+  "description": "mmm",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 3,
+  "node": "TMG_AS_ROOT",
+  "onHold": true,
+  "owner": "i",
+  "passBy": true,
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "title": "${id} ala ma kota i psa",
+  "customFieldValues": {
+    "CF1": "abcdef"
+  },
+  "forceCompletedCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "TMG_AS_ROOT_HOLD",
+        "operator": "IS_NOT_NULL",
+        "value": null
+      }
+    ],
+    "operator": "AND"
+  },
+  "processingCommand": {
+    "script": "sleep 1\n\n\n大五碼\n\nsave the kids\n\nнет"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FAILED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "OJ"
+      }
+    }
+  ]
+}
