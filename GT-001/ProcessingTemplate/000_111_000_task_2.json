@@ -39,7 +39,7 @@
     "operator": "AND"
   },
   "processingCommand": {
-    "script": "sleep 12\n\ndate\n\nps -ef\n\nls -alt\n\nsleep 1"
+    "script": "sleep 12\n\ndate\n\nps -ef\n\nls -alt\n\nll\n\nls -lrt\n\nsleep 100\n"
   },
   "actions": 
   [

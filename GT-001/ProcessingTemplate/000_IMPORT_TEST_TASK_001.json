@@ -13,7 +13,7 @@
   "taskType": "SH",
   "weight": "10",
   "processingCommand": {
-    "script": "sleep 22\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho alamakota\n\necho привет\n\necho ${endpoint}\n\necho \"アラは猫を飼っています\"\n\nexit 0\n"
+    "script": "sleep 22\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho alamakota\n\necho привет\n\necho ${endpoint}\n\necho \"アラは猫を飼っています\"\n\nsleep 10\n\nexit 0\n"
   },
   "actions": 
   [
