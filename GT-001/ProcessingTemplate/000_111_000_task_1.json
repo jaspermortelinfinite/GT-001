@@ -14,6 +14,7 @@
   "statisticPeriod": "ALL",
   "taskType": "SH",
   "title": "${id} ala ma kota i psa",
+  "verificationDate": "2024-09-23T10:18:30.963",
   "customFieldValues": {
     "CF1": "abcdef"
   },

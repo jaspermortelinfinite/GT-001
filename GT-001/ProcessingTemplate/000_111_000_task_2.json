@@ -13,6 +13,7 @@
   "statisticPeriod": "ALL",
   "taskType": "SH",
   "title": "${id} ala ma kota",
+  "verificationDate": "2024-09-23T10:18:40.054",
   "customFieldValues": {
     "CF1": "abcdef"
   },
