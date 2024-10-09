@@ -29,7 +29,7 @@
     "operator": "AND"
   },
   "processingCommand": {
-    "script": "sleep 1\n\n\n大五碼\n\nsave the kids\n\necho нет\n\necho извиный\n\necho ^&*()-+;\"!@#$%^&*()\"\n\necho ()/;"
+    "script": "sleep 1\n\n\n大五碼\n\nsave the kids\n\necho нет\n\necho извиный\n\necho чёрт\n\necho иди на хуй\n\necho ^&*()-+;\"!@#$%^&*()\"\n\necho ()/;"
   },
   "actions": 
   [
