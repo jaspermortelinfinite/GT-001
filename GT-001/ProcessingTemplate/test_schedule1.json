@@ -1,0 +1,18 @@
+{
+  "owner": "jasper.mortel@infinitedata.com",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "name": "test_shell_task",
+      "processingTemplate": "test_shell_task",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "taskType": "SH"
+    }
+  ]
+}

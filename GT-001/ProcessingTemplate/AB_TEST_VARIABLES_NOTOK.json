@@ -6,6 +6,8 @@
   "sensorType": "FILE_SENSOR",
   "serverNodeType": "FILE_MANAGER",
   "serviceType": "SENSOR",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
   "customFieldValues": {
   },
   "processingCommand": {

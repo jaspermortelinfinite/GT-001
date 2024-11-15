@@ -1,0 +1,193 @@
+{
+  "description": "21| T2_O | GLOBUSPRINTER_TO_GLOBUS | SDJ-174775",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "Administrator",
+  "priority": "0",
+  "processingType": "TRIGGER",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "AN14",
+    "BRELINK1",
+    "GLOBUS24",
+    "KS_MIGRACJA",
+    "MIG_2024_06_27",
+    "PROD"
+  ],
+  "triggerType": "SCHEDULE",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "defaultValue": "\\\\mbank.pl\\zasoby\\Z-iBRE_DPS\\arch",
+      "editorType": "TEXT",
+      "name": "BACKUP_DIRECTORY",
+      "required": true,
+      "title": "Archive directory on source node"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "CHECK_GROWTH",
+      "title": "Interval for file growth check [minutes]"
+    },
+    {
+      "defaultValue": "NON_GLOBUS",
+      "editorType": "TEXT",
+      "name": "SEMAPHORE",
+      "title": "Name of semaphore used to disable line execution"
+    },
+    {
+      "editorType": "TEXT",
+      "name": "SOURCE_CODE",
+      "title": "Coding page for files on input"
+    },
+    {
+      "defaultValue": "21| T2_O | GLOBUSPRINTER_TO_GLOBUS | SDJ-174775",
+      "editorType": "TEXT",
+      "name": "DESCRIPTION",
+      "required": true,
+      "title": "Item description"
+    },
+    {
+      "defaultValue": "^(MT\\d{8}\\.xml)|(MT\\d{8}\\.\\d{3}\\.xml)$",
+      "editorType": "TEXT",
+      "name": "FILE_PATTERN",
+      "required": true,
+      "title": "File name pattern for scans of source directory"
+    },
+    {
+      "defaultValue": "21",
+      "editorType": "TEXT",
+      "name": "LINE_ID",
+      "required": true,
+      "title": "Brelink line ID"
+    },
+    {
+      "defaultValue": "log_database",
+      "editorType": "TEXT",
+      "name": "LOG_ENDPOINT",
+      "required": true,
+      "title": "Endpoint of Log Database"
+    },
+    {
+      "defaultValue": "S",
+      "editorType": "TEXT",
+      "hint": "S - Standard G - Growth Check",
+      "name": "MODE",
+      "required": true,
+      "title": "Running mode"
+    },
+    {
+      "defaultValue": "anowmq",
+      "editorType": "TEXT",
+      "name": "MQ_ENDPOINT",
+      "required": true,
+      "title": "Endpoint of IBM MQ Agent"
+    },
+    {
+      "defaultValue": "WAR01BRELINK14",
+      "editorType": "TEXT",
+      "name": "NOTIFICATION_SOURCE",
+      "required": true,
+      "title": "Source node for notification"
+    },
+    {
+      "defaultValue": "ANOWFT1",
+      "editorType": "TEXT",
+      "name": "QMANAGER",
+      "required": true,
+      "title": "MQ manager name"
+    },
+    {
+      "defaultValue": "30000",
+      "editorType": "TEXT",
+      "name": "RUN_INTERVAL",
+      "required": true,
+      "title": "Interval of File Sensor checks in ms"
+    },
+    {
+      "defaultValue": "WAR01BRELINK14",
+      "editorType": "TEXT",
+      "name": "SERVER_NODE",
+      "required": true,
+      "title": "Agent performing transfer action"
+    },
+    {
+      "defaultValue": "WIN",
+      "editorType": "TEXT",
+      "name": "OS",
+      "required": true,
+      "title": "OS of the node"
+    },
+    {
+      "defaultValue": "Warning",
+      "editorType": "TEXT",
+      "hint": "critical, warnin, normal etc.",
+      "name": "SEVERITY",
+      "title": "Severity for Szymon notification"
+    },
+    {
+      "defaultValue": "\\\\mbank.pl\\zasoby\\Z-iBRE_DPS",
+      "editorType": "TEXT",
+      "name": "SOURCE_DIRECTORY",
+      "required": true,
+      "title": "Source directory to scan for files"
+    },
+    {
+      "defaultValue": "[{\"OBJECT_JSON\":1,\"CODE_JSON\":\"\",\"TARGET_CODE_JSON\":\"\",\"EOL_JSON\":\"\",\"CHMOD_JSON\":\"\",\"HOSTNAME_JSON\":\"GLOBUS24\",\"MODE_JSON\":\"O\",\"TARGET_DIRECTORY_JSON\":\"/mtserver/Services/GP_in\",\"TARGET_FILE_NAME_JSON\":\"regexp:^(.*)$;\\\\1\",\"WORKPATH_JSON\":\"/mtserver/Services/GP_in/SCHEDULEIN.AGENT/21/TEMP\"}]",
+      "editorType": "TEXT_AREA",
+      "name": "TARGET_JSON",
+      "required": true,
+      "title": "JSON with target parameters"
+    },
+    {
+      "defaultValue": "23:59:00",
+      "editorType": "TEXT",
+      "name": "UNTIL_TIME_FS",
+      "required": true,
+      "title": "Stop time for Schedule"
+    },
+    {
+      "defaultValue": "23:59:00",
+      "editorType": "TEXT",
+      "name": "UNTIL_TIME_MQS",
+      "required": true,
+      "title": "Stop time for Schedule"
+    },
+    {
+      "defaultValue": "D:/AGENTS/TEMPORARY/GBP.WIN/SCHEDULEIN.AGENT/21/WORK",
+      "editorType": "TEXT",
+      "name": "WORK_DIRECTORY",
+      "required": true,
+      "title": "Work directory"
+    }
+  ],
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "MQ_TRANSFER_Starting_workflow",
+      "processingTemplate": "MQ_TRANSFER_Starting_workflow",
+      "processingType": "WORKFLOW",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "MQ_TRANSFER_Starting_workflow",
+      "workflowType": "STANDARD"
+    }
+  ],
+  "timeTriggers": 
+  [
+    {
+      "calendarDays": "All calendar days",
+      "endTime": 86399999,
+      "repeatInterval": 3600000,
+      "startTime": 600000,
+      "timeTriggerType": "DAILY",
+      "timeZone": "Europe/Warsaw"
+    }
+  ]
+}
