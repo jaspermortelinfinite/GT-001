@@ -1,0 +1,229 @@
+{
+  "description": "GENEROWANIE EKSTRAKTOW Z DANYMI BLOKAD PRZELEWU EE",
+  "folder": "ZSI",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "owner": "s1615880",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "resultMapping": "JOB_SYSOUT",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "ZSI",
+    "CMT_COKQ",
+    "CMT_CZY9",
+    "CMT_D43C",
+    "CMT_D73N"
+  ],
+  "workflowType": "CYCLE",
+  "customFieldValues": {
+  },
+  "ignoreCondition": {
+    "criteria": 
+    [
+      {
+        "fieldName": "${BVW_SWITCH}",
+        "operator": "NE",
+        "value": "ON"
+      }
+    ],
+    "operator": "AND"
+  },
+  "processingCommand": {
+    "checkBeforeFirstRun": true,
+    "cycleDelay": "1000",
+    "cycleDelayMode": "FINISH_TO_START",
+    "cycleFailMode": "RESTART_NONE",
+    "cycleType": "SPECIFIC_TIMES_OF_DAY",
+    "specificTimesOfDay": "08:00,12:00,14:30,17:30"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "BGJPBLOX_FE_WF",
+      "processingTemplate": "BGJPBLOX_FE_WF",
+      "processingType": "WORKFLOW",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "title": "BGJ${ENV1}BLOX_FE_WF",
+      "workflowType": "FOR_EACH"
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "BGJPBLO0",
+      "processingTemplate": "BGJPBLO0",
+      "processingType": "TASK",
+      "serverNodeType": "RAINCODE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "taskType": "RAINCODE_STORED_JCL",
+      "title": "BGJ${ENV1}BLO0",
+      "actions": 
+      [
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "subTask": "STEP050",
+          "subTaskConditionMode": "SIMPLE",
+          "subTaskOperator": "EQ",
+          "subTaskReturnCode": "C0004",
+          "processingCommand": {
+            "abortChildren": false,
+            "actionTargetType": "RELATED",
+            "forbidChildrenStart": true,
+            "forceChildren": false,
+            "keepForcedStatus": true,
+            "killChildren": false,
+            "operator": "",
+            "relation": {
+              "peer": "ZSI_SEND_EMAIL",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        },
+        {
+          "processingActionType": "FORCE_COMPLETED",
+          "processingEventCategory": "PROCESSING",
+          "processingEventType": "PROCESSING_COMPLETED",
+          "subTask": "STEP050",
+          "subTaskConditionMode": "SIMPLE",
+          "subTaskOperator": "EQ",
+          "subTaskReturnCode": "C0004",
+          "processingCommand": {
+            "actionTargetType": "RELATED",
+            "keepForcedStatus": true,
+            "operator": "",
+            "relation": {
+              "peer": "BG_COPY_FILE",
+              "relationType": "PEER"
+            },
+            "restartType": "RESTART_FROM_BEGINNING"
+          }
+        }
+      ],
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "BGJPBLOX_FE_WF",
+          "predecessor": "BGJPBLOX_FE_WF",
+          "processingStatus": "COMPLETED",
+          "processingType": "WORKFLOW",
+          "workflowType": "FOR_EACH"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "BG_COPY_FILE",
+      "processingTemplate": "BG_COPY_FILE",
+      "processingType": "TASK",
+      "serverNodeType": "WINDOWS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "taskType": "POWERSHELL",
+      "ignoreCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "${BLOKADY_1063_ENV}",
+            "operator": "NE",
+            "value": "${ENV}"
+          },
+          {
+            "fieldName": "${ENV}",
+            "operator": "NE",
+            "value": "ALNP"
+          }
+        ],
+        "operator": "AND"
+      },
+      "templateParameters": {
+        "fileDir1": "${GLOBAL_GPFS_WIN_PREFIX}\\FS_${ENV}\\${ENV}\\BG\\BAT1NBAS\\JBLO0\\NROZBLEE.seq",
+        "fileDir2": "${GLOBAL_GPFS_WIN_PREFIX}\\FS_${ENV}\\${ENV}\\BG\\BAT1NBAS\\JBLO0\\NIEROZLICZONE_BLOKADY_EE.TXT"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "BGJPBLO0",
+          "predecessor": "BGJPBLO0",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "RAINCODE",
+          "taskType": "RAINCODE_STORED_JCL"
+        }
+      ]
+    },
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "ZSI_SEND_EMAIL",
+      "processingTemplate": "ZSI_SEND_EMAIL",
+      "processingType": "TASK",
+      "serverNodeType": "EMAIL",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "taskType": "EMAIL_SEND",
+      "title": "ZSI_SEND_EMAIL",
+      "ignoreCondition": {
+        "criteria": 
+        [
+          {
+            "fieldName": "${BLOKADY_1063_ENV}",
+            "operator": "NE",
+            "value": "${ENV}"
+          },
+          {
+            "fieldName": "${ENV}",
+            "operator": "NE",
+            "value": "ALNP"
+          }
+        ],
+        "operator": "AND"
+      },
+      "templateParameters": {
+        "EMAIL_ATTACHMENTS": "${GLOBAL_GPFS_WIN_PREFIX}\\FS_${ENV}\\${ENV}\\BG\\BAT1NBAS\\JBLO0\\NIEROZLICZONE_BLOKADY_EE.TXT",
+        "EMAIL_BCC": "${GLOBAL_EMAIL_BCC}",
+        "EMAIL_CC": "${GLOBAL_EMAIL_CC}",
+        "EMAIL_MSG": " ",
+        "EMAIL_SUBJECT": "NIEROZLICZONE BLOKADY EE",
+        "EMAIL_TO": "${EMAIL_BLOKADY_1063}"
+      },
+      "dependencies": 
+      [
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "BG_COPY_FILE",
+          "predecessor": "BG_COPY_FILE",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "WINDOWS",
+          "taskType": "POWERSHELL"
+        },
+        {
+          "dependencyType": "PREDECESSOR",
+          "name": "BGJPBLO0",
+          "predecessor": "BGJPBLO0",
+          "processingStatus": "COMPLETED",
+          "processingType": "TASK",
+          "serverNodeType": "RAINCODE",
+          "taskType": "RAINCODE_STORED_JCL"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "description": "GENEROWANIE RAPORTU BLOKAD EXSPERS ELIXIR",
+  "folder": "ZSI",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "node": "RC-WIN-LB",
+  "owner": "pz001368",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "RAINCODE",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "ZSI",
+    "CMT_COKQ"
+  ],
+  "taskType": "RAINCODE_STORED_JCL",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "attachJesSpool": true,
+    "comment": "PASSED_DATA = ${ENV}|${ODATE}",
+    "evaluateAutoEditExpressions": true,
+    "evaluateVariables": true,
+    "pathToScript": "ISPW.P.${ENV}.JCLCTM(BGJ${ENV1}BLO0)"
+  },
+  "actions": 
+  [
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FORCE_COMPLETED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "FORCE_OK"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_STARTED",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "J${id}"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_ABORT",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "ABORT"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_RESTART",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "RESTART"
+      }
+    },
+    {
+      "processingActionType": "ADD_TAG",
+      "processingEventCategory": "PROCESSING",
+      "processingEventType": "PROCESSING_FORCE_READY",
+      "processingCommand": {
+        "actionTargetType": "SELF",
+        "operator": "",
+        "restartType": "RESTART_FROM_BEGINNING",
+        "value": "FORCE_READY"
+      }
+    }
+  ],
+  "dependencies": 
+  [
+    {
+      "dependencyType": "RESOURCE",
+      "name": "INIT",
+      "processingStatus": "COMPLETED",
+      "processingType": "TASK",
+      "resource": "INIT",
+      "resourcePermits": "1",
+      "resourceType": "STOCK",
+      "serverNodeType": "RAINCODE",
+      "taskType": "RAINCODE_STORED_JCL"
+    }
+  ]
+}
