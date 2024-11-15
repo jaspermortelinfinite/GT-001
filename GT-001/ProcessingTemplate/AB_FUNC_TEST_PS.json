@@ -4,6 +4,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "WINDOWS",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "taskType": "POWERSHELL",
   "customFieldValues": {
   },
