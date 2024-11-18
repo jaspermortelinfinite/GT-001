@@ -14,7 +14,7 @@
   "verificationDate": "2024-09-23T10:18:48.013",
   "weight": "10",
   "processingCommand": {
-    "script": "sleep 22\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho alamakota\n\necho привет\n\necho ${endpoint}\n\necho \"アラは猫を飼っています\"\n\nsleep 10\n\necho this test is created on 23_9_24\n\necho this is a test on 09_10_24\n\necho \"this is a test for GT-010\"\n\nexit 0\n"
+    "script": "sleep 22\n\necho \"SINVAR:AAAA=`uname -a`\"\n\necho alamakota\n\necho привет\n\necho ${endpoint}\n\necho \"アラは猫を飼っています\"\n\nsleep 10\n\necho this test is created on 23_9_24\n\necho this is a test on 09_10_24\n\necho \"this is a test for GT-010\"\n\nexit 0\n\necho 11_18_2024"
   },
   "actions": 
   [

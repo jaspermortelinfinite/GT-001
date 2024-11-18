@@ -10,6 +10,6 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "echo \"${AB_FUNC_TEST_VAR}\"\necho \"\"\necho \"${AB_FUNC_TEST_FUNC(\"${AB_FUNC_TEST_VAR}\")}\""
+    "script": "echo \"${AB_FUNC_TEST_VAR}\"\necho \"\"\necho \"${AB_FUNC_TEST_FUNC(\"${AB_FUNC_TEST_VAR}\")}\"\n\necho \"test\""
   }
 }

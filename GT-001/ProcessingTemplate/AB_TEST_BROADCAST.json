@@ -1,4 +1,5 @@
 {
+  "autoArchive": true,
   "highRiskStatisticMethod": "PERCENT",
   "highRiskStatisticPeriod": "MONTH",
   "owner": "PZ004947",

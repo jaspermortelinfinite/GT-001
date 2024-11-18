@@ -8,6 +8,7 @@
   "serviceType": "SENSOR",
   "statisticMethod": "AVERAGE",
   "statisticPeriod": "MONTH",
+  "verboseMode": true,
   "customFieldValues": {
   },
   "processingCommand": {
