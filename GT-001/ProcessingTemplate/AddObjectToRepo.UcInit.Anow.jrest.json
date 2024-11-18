@@ -6,8 +6,8 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "REST_WEB_SERVICE",
-  "statisticMethod": "MEDIAN",
-  "statisticPeriod": "ALL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
   "tags": 
   [
     "UcInit",

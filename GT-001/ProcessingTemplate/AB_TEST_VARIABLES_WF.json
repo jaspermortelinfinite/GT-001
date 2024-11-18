@@ -2,8 +2,8 @@
   "owner": "PZ004947",
   "priority": "0",
   "processingType": "WORKFLOW",
-  "statisticMethod": "MEDIAN",
-  "statisticPeriod": "ALL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
   "workflowType": "STANDARD",
   "customFieldValues": {
   },
@@ -25,8 +25,8 @@
       "sensorType": "FILE_SENSOR",
       "serverNodeType": "FILE_MANAGER",
       "serviceType": "SENSOR",
-      "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
     },
     {
       "name": "AB_TEST_VARIABLES_OK",
@@ -35,8 +35,8 @@
       "sensorType": "FILE_SENSOR",
       "serverNodeType": "FILE_MANAGER",
       "serviceType": "SENSOR",
-      "statisticMethod": "MEDIAN",
-      "statisticPeriod": "ALL"
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
     }
   ]
 }

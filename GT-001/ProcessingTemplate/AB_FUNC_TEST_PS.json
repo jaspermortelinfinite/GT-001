@@ -4,12 +4,12 @@
   "priority": "0",
   "processingType": "TASK",
   "serverNodeType": "WINDOWS",
-  "statisticMethod": "MEDIAN",
-  "statisticPeriod": "ALL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
   "taskType": "POWERSHELL",
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "echo \"${AB_FUNC_TEST_VAR}\"\necho \"\"\necho \"${AB_FUNC_TEST_FUNC(\"${AB_FUNC_TEST_VAR}\")}\""
+    "script": "echo \"${AB_FUNC_TEST_VAR}\"\necho \"\"\necho \"${AB_FUNC_TEST_FUNC(\"${AB_FUNC_TEST_VAR}\")}\"\n\necho \"test\""
   }
 }
