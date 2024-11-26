@@ -2,6 +2,8 @@
   "owner": "jasper.mortel@infinitedata.com",
   "priority": "0",
   "processingType": "TRIGGER",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "triggerType": "SCHEDULE",
   "customFieldValues": {
   },
@@ -12,6 +14,8 @@
       "processingTemplate": "test_shell_task",
       "processingType": "TASK",
       "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
       "taskType": "SH"
     }
   ]

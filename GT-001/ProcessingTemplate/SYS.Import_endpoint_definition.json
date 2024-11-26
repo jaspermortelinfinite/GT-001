@@ -1,0 +1,19 @@
+{
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "ZEW_2_33407_A",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "DESIGN_IMPORT",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "applyImmediately": true,
+    "comment": "Root ID: ${rootId}\nProcess ID: ${id}",
+    "filePath": "/home/anowapp/jasper/test/endpoint_payload.json",
+    "overwriteDomain": false
+  }
+}

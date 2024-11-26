@@ -1,0 +1,39 @@
+{
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "test",
+      "required": true,
+      "title": "test"
+    }
+  ],
+  "items": 
+  [
+    {
+      "name": "-------",
+      "processingTemplate": "-------",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
+    },
+    {
+      "name": "-------.1",
+      "processingTemplate": "-------",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
+    }
+  ]
+}

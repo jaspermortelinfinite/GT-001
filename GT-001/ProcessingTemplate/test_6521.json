@@ -1,0 +1,10 @@
+{
+  "description": "test for 6521",
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "taskType": "SH",
+  "customFieldValues": {
+  }
+}
