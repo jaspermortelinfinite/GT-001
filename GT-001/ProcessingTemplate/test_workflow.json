@@ -2,6 +2,8 @@
   "owner": "jasper.mortel",
   "priority": "0",
   "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
   "workflowType": "STANDARD",
   "customFieldValues": {
   },
