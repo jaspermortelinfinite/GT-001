@@ -1,0 +1,16 @@
+{
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "INTERNAL",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "NOTIFY_GROUP",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "confirmationRequired": true,
+    "notificationGroup": "test_notif",
+    "notificationMessageTemplate": "test_notif_template"
+  }
+}
