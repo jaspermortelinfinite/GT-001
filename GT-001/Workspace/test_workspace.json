@@ -4,5 +4,14 @@
   "setWorkspaceTags": 
   [
     ""
+  ],
+  "parameters": 
+  [
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "test_param",
+      "title": "test_param"
+    }
   ]
 }
