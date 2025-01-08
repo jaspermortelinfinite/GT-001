@@ -10,6 +10,20 @@
     },
     {
       "allowExpressions": true,
+      "defaultValue": "${test}",
+      "editorType": "TEXT",
+      "name": "test",
+      "title": "test"
+    },
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "test_param",
+      "title": "test_param"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "test",
       "editorType": "TEXT",
       "name": "test_param",
       "title": "test_param"

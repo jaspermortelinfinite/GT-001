@@ -7,6 +7,13 @@
       "editorType": "TEXT",
       "name": "Message",
       "title": "Message"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "test",
+      "editorType": "TEXT",
+      "name": "Message",
+      "title": "Message"
     }
   ]
 }
