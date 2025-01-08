@@ -1,0 +1,12 @@
+{
+  "parameters": 
+  [
+    {
+      "allowExpressions": true,
+      "defaultValue": "test",
+      "editorType": "TEXT",
+      "name": "Message",
+      "title": "Message"
+    }
+  ]
+}
