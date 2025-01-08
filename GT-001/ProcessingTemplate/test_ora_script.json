@@ -9,6 +9,6 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "select * from;"
+    "script": "select * from;\n\n--this is a test comment"
   }
 }
