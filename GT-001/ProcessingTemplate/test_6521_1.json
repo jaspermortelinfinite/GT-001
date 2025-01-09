@@ -8,5 +8,8 @@
   "statisticPeriod": "ALL",
   "taskType": "SH",
   "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "echo testing 3"
   }
 }
