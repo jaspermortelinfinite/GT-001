@@ -1,10 +1,4 @@
 {
-  "addPrefix": true,
-  "prefix": "test_wps_",
-  "setWorkspaceTags": 
-  [
-    ""
-  ],
   "parameters": 
   [
     {
@@ -27,13 +21,6 @@
       "editorType": "TEXT",
       "name": "test",
       "title": "test"
-    },
-    {
-      "allowExpressions": true,
-      "defaultValue": "${txt}",
-      "editorType": "TEXT",
-      "name": "text",
-      "title": "text"
     }
   ]
 }
