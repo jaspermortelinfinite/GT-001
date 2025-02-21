@@ -36,6 +36,15 @@
       "statisticMethod": "MEDIAN",
       "statisticPeriod": "ALL",
       "taskType": "SH"
+    },
+    {
+      "name": "set_semaphore_test",
+      "processingTemplate": "set_semaphore_test",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SET_SEMAPHORE_STATE"
     }
   ]
 }

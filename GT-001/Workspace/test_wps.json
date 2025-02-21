@@ -21,6 +21,13 @@
       "editorType": "TEXT",
       "name": "test",
       "title": "test"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "txt",
+      "editorType": "TEXT",
+      "name": "text",
+      "title": "text"
     }
   ]
 }

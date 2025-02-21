@@ -17,10 +17,10 @@
     },
     {
       "allowExpressions": true,
-      "defaultValue": "test",
+      "defaultValue": "tester",
       "editorType": "TEXT",
-      "name": "test_param",
-      "title": "test_param"
+      "name": "tester",
+      "title": "tester"
     }
   ]
 }
