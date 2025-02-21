@@ -10,6 +10,6 @@
   "customFieldValues": {
   },
   "processingCommand": {
-    "script": "echo tester"
+    "script": "echo testing 3"
   }
 }
