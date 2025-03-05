@@ -1,10 +1,4 @@
 {
-  "addPrefix": true,
-  "prefix": "test_wps_",
-  "setWorkspaceTags": 
-  [
-    ""
-  ],
   "parameters": 
   [
     {
