@@ -1,13 +1,8 @@
 {
+  "addPrefix": true,
+  "prefix": "test_workspace_",
   "parameters": 
   [
-    {
-      "allowExpressions": true,
-      "defaultValue": "${test}",
-      "editorType": "TEXT",
-      "name": "test",
-      "title": "test"
-    },
     {
       "allowExpressions": true,
       "defaultValue": "${test}",
