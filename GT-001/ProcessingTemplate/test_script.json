@@ -1,0 +1,15 @@
+{
+  "node": "test_linux",
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "echo \"SINVAR:AAAA=`uname -a`\"\n\necho alamakota\n\necho \"привет\"\n\necho \"アラは猫を飼っています\"\n\necho \"this is a test for GT-010\"\n"
+  }
+}

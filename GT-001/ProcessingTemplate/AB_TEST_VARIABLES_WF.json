@@ -1,0 +1,42 @@
+{
+  "owner": "PZ004947",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "defaultValue": "${ENV}",
+      "editorType": "TEXT",
+      "name": "DST_ENV",
+      "title": "DST_ENV"
+    }
+  ],
+  "items": 
+  [
+    {
+      "name": "AB_TEST_VARIABLES_NOTOK",
+      "processingTemplate": "AB_TEST_VARIABLES_NOTOK",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serverNodeType": "FILE_MANAGER",
+      "serviceType": "SENSOR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    },
+    {
+      "name": "AB_TEST_VARIABLES_OK",
+      "processingTemplate": "AB_TEST_VARIABLES_OK",
+      "processingType": "SERVICE",
+      "sensorType": "FILE_SENSOR",
+      "serverNodeType": "FILE_MANAGER",
+      "serviceType": "SENSOR",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH"
+    }
+  ]
+}

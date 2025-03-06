@@ -1,0 +1,50 @@
+{
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "test",
+      "required": true,
+      "title": "test"
+    }
+  ],
+  "items": 
+  [
+    {
+      "name": "-------",
+      "processingTemplate": "-------",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
+    },
+    {
+      "name": "-------.1",
+      "processingTemplate": "-------",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
+    },
+    {
+      "name": "set_semaphore_test",
+      "processingTemplate": "set_semaphore_test",
+      "processingType": "TASK",
+      "serverNodeType": "INTERNAL",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SET_SEMAPHORE_STATE"
+    }
+  ]
+}

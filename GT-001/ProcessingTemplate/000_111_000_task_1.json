@@ -14,6 +14,7 @@
   "statisticPeriod": "ALL",
   "taskType": "SH",
   "title": "${id} ala ma kota i psa",
+  "verificationDate": "2024-09-23T10:18:30.963",
   "customFieldValues": {
     "CF1": "abcdef"
   },
@@ -29,7 +30,7 @@
     "operator": "AND"
   },
   "processingCommand": {
-    "script": "sleep 1\n\n\n大五碼\n\nsave the kids\n\necho нет\n\necho the quick brown fox jumps over the lazy dog.\n\necho ^&*()-+;\"!@#$%^&*()\"\n\necho ()/;\n\necho hello world"
+    "script": "sleep 1\n\n\n大五碼\n\nsave the kids\n\necho нет\n\necho извиный\n\necho чёрт\n\necho иди на хуй\n\necho ^&*()-+;\"!@#$%^&*()\"\n\necho ()/;\n\necho test 11_18_2024\n\n\necho test 01_08_2025"
   },
   "actions": 
   [

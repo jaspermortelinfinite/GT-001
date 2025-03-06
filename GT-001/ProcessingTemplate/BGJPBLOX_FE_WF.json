@@ -1,0 +1,46 @@
+{
+  "description": "Uruchomienie BGJPBLOX w wielu wątkach ",
+  "folder": "ZSI",
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "WEEK",
+  "highRiskThreshold": 5,
+  "lazyLoad": true,
+  "owner": "PZ002435",
+  "passActionsToChildren": true,
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "ZSI",
+    "CMT_COKQ"
+  ],
+  "workflowType": "FOR_EACH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "forEachCollection": "${KVS::STREAM_MODELS_KVS(BG001NORMA)}",
+    "forEachCollectionType": "JSON"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "WEEK",
+      "highRiskThreshold": 5,
+      "name": "BGJPBLOX",
+      "processingTemplate": "BGJPBLOX",
+      "processingType": "TASK",
+      "serverNodeType": "RAINCODE",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "taskType": "RAINCODE_STORED_JCL",
+      "title": "BGJ${ENV1}BLOX${STREAM}",
+      "templateParameters": {
+        "JNAME": "BGJ${ENV1}BLOX${STREAM}",
+        "STREAMMODEL": "BG001NORMA"
+      }
+    }
+  ]
+}

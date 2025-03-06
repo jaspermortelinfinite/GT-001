@@ -1,0 +1,15 @@
+{
+  "description": "test for 6521",
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "LINUX",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "taskType": "SH",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "testing"
+  }
+}

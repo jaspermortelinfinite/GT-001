@@ -1,0 +1,39 @@
+{
+  "owner": "jasper.mortel",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "MEDIAN",
+  "statisticPeriod": "ALL",
+  "workflowType": "STANDARD",
+  "customFieldValues": {
+  },
+  "items": 
+  [
+    {
+      "name": "test_workflow",
+      "processingTemplate": "test_workflow",
+      "processingType": "WORKFLOW",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "workflowType": "STANDARD"
+    },
+    {
+      "name": "test_6521_1",
+      "processingTemplate": "test_6521_1",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
+    },
+    {
+      "name": "test_6521",
+      "processingTemplate": "test_6521",
+      "processingType": "TASK",
+      "serverNodeType": "LINUX",
+      "statisticMethod": "MEDIAN",
+      "statisticPeriod": "ALL",
+      "taskType": "SH"
+    }
+  ]
+}

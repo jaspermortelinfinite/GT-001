@@ -1,0 +1,30 @@
+{
+  "autoArchive": true,
+  "highRiskStatisticMethod": "PERCENT",
+  "highRiskStatisticPeriod": "MONTH",
+  "owner": "PZ004947",
+  "priority": "0",
+  "processingType": "WORKFLOW",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "workflowType": "BROADCAST",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "broadcastExpression": "OS-WIN-LB=>"
+  },
+  "items": 
+  [
+    {
+      "highRiskStatisticMethod": "PERCENT",
+      "highRiskStatisticPeriod": "MONTH",
+      "name": "AB_TEST_BROADCAST_TASK",
+      "processingTemplate": "AB_TEST_BROADCAST_TASK",
+      "processingType": "TASK",
+      "serverNodeType": "WINDOWS",
+      "statisticMethod": "AVERAGE",
+      "statisticPeriod": "MONTH",
+      "taskType": "POWERSHELL"
+    }
+  ]
+}

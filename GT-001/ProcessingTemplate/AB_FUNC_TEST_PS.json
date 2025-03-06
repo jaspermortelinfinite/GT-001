@@ -1,0 +1,15 @@
+{
+  "node": "test_win64_j17",
+  "owner": "PZ004947",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "WINDOWS",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "taskType": "POWERSHELL",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "script": "echo \"${AB_FUNC_TEST_VAR}\"\necho \"\"\necho \"${AB_FUNC_TEST_FUNC(\"${AB_FUNC_TEST_VAR}\")}\"\n\necho \"test\""
+  }
+}

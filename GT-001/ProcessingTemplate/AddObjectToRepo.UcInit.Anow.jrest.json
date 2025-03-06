@@ -1,0 +1,57 @@
+{
+  "endpoint": "AnowApiNoAuth.Gbl.ep",
+  "endpointType": "REST_WEB_SERVICE",
+  "node": "AnowEngine.Rest.rr",
+  "owner": "jakub.szeliga@infinitedata.com",
+  "priority": "0",
+  "processingType": "TASK",
+  "serverNodeType": "REST_WEB_SERVICE",
+  "statisticMethod": "AVERAGE",
+  "statisticPeriod": "MONTH",
+  "tags": 
+  [
+    "UcInit",
+    "Anow"
+  ],
+  "taskType": "REST_WEB_SERVICE_CALL",
+  "customFieldValues": {
+  },
+  "processingCommand": {
+    "body": "id=[${AcocDomain}]${ObjectId}&codeRepository=[${AcocDomain}]${Repo}&domainClassName=${DomainClassName}",
+    "headers": "Authorization=Bearer ${ACCESS_TOKEN}\nContent-Type=application/x-www-form-urlencoded\nDomain=${domain}",
+    "method": "POST",
+    "resultVariableLevel": "SELF",
+    "url": "codeRepository/addObject?domain=${domain}"
+  },
+  "designParameters": 
+  [
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "ObjectId",
+      "required": true,
+      "title": "ObjectId"
+    },
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "Repo",
+      "required": true,
+      "title": "Repo"
+    },
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "DomainClassName",
+      "required": true,
+      "title": "DomainClassName"
+    },
+    {
+      "allowExpressions": true,
+      "editorType": "TEXT",
+      "name": "AcocDomain",
+      "required": true,
+      "title": "AcocDomain"
+    }
+  ]
+}

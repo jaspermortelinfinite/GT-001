@@ -1,0 +1,26 @@
+{
+  "parameters": 
+  [
+    {
+      "allowExpressions": true,
+      "defaultValue": "${test}",
+      "editorType": "TEXT",
+      "name": "test",
+      "title": "test"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "${test}",
+      "editorType": "TEXT",
+      "name": "test",
+      "title": "test"
+    },
+    {
+      "allowExpressions": true,
+      "defaultValue": "tester",
+      "editorType": "TEXT",
+      "name": "tester",
+      "title": "tester"
+    }
+  ]
+}

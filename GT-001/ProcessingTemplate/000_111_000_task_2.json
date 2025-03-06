@@ -13,6 +13,7 @@
   "statisticPeriod": "ALL",
   "taskType": "SH",
   "title": "${id} ala ma kota",
+  "verificationDate": "2024-09-23T10:18:40.054",
   "customFieldValues": {
     "CF1": "abcdef"
   },
@@ -39,7 +40,7 @@
     "operator": "AND"
   },
   "processingCommand": {
-    "script": "sleep 12\n\ndate\n\nps -ef\n\nls -alt\n\nll\n\necho привет чувак\n\nls -lrt\n\nsleep 100\n"
+    "script": "sleep 12\n\ndate\n\nps -ef\n\nls -alt\n\nll\n\necho привет чувак\n\nls -lrt\n\necho этот тест создан на 23_09_2024\necho этот тест создан на 09_10_2024\n\nsleep 100\n\necho test 11_18_2024\n\necho test 01_06_2025"
   },
   "actions": 
   [
