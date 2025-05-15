@@ -19,7 +19,7 @@
     "ZnacznikPrzyrostu": "111111111111"
   },
   "processingCommand": {
-    "script": "echo \"ANOWVAR:AA=`uname -a`\"\n\necho 3/24/25 \n\nexit 4"
+    "script": "echo \"ANOWVAR:AA=`uname -a`\"\n\necho 3/24/25 \n\necho 15/05/2025\n\nexit 4"
   },
   "actions": 
   [
