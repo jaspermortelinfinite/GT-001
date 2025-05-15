@@ -10,10 +10,10 @@
   "designParameters": 
   [
     {
-      "defaultValue": "${ENV}",
+      "defaultValue": "${env}",
       "editorType": "TEXT",
-      "name": "DST_ENV",
-      "title": "DST_ENV"
+      "name": "dst_env",
+      "title": "dst_env"
     }
   ],
   "items": 
