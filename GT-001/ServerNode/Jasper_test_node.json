@@ -2,5 +2,12 @@
   "serverNodeType": "LINUX",
   "totalWeightCapacity": 50,
   "customFieldValues": {
-  }
+  },
+  "endpoints": 
+  [
+    {
+      "endpoint": "SIN_SOV_AWS_ML_ENDPOINT",
+      "endpointType": "SSH"
+    }
+  ]
 }
