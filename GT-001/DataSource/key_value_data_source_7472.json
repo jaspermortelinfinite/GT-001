@@ -1,0 +1,13 @@
+{
+  "dataSourceType": "LOCAL_KEY_VALUE_STORE",
+  "dataType": "STRING",
+  "errorHandling": "INIT",
+  "validity": "FREE",
+  "records": 
+  [
+    {
+      "key": "service",
+      "value": "{\"Owner_ldap\":\"abc\",\"Owner_email\":\"xyz@dhl.com\",\"ELR\":\"\",\"IsChargeable\":false,\"ID\":\"12345\"}"
+    }
+  ]
+}
