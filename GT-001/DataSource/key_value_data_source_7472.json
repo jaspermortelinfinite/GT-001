@@ -7,7 +7,7 @@
   [
     {
       "key": "service",
-      "value": "{\"Owner_ldap\":\"abc\",\"Owner_email\":\"xyz@dhl.com\",\"ELR\":\"\",\"IsChargeable\":false,\"ID\":\"12345\"}"
+      "value": "{\"Owner_ldap\":\"abc\",\"Owner_email\":\"xyz@dhl.com\",\"ELR\":\"\",\"IsChargeable\":false,\"ID\":\"BS12345\"}"
     }
   ]
 }
